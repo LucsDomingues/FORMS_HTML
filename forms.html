@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMS_HTML</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="formu">
+    <h1>Luac Viagens</h1>
+    <form action="endereço de script" method="POST" id="dados" name="dados">
+        <!--Fieldset é usado para criar blocos dividindo as partes do formulário-->
+        <Fieldset>
+            <!--Legend é a legenda que aparecerá entre as bordas do fieldset-->
+            <legend>Dados de Acesso</legend>
+            <p>
+                <!--a tag label possibilita mostrar ao user o que o campo está pedindo-->
+                <label for="user">Usuário:</label>
+                <!--use o text quando quiser pedir algum nome ou algo impossivel de saber, ou seja o usuário é obrigado a digitar-->
+                <!--autofocus é um atributo opcional, que serve para iniciar a página com o cursor de texto já selecionado em um campo-->
+                <input type="text" name="user" id="user" autofocus placeholder="Ex: Usuario123">
+                <!--O placeholder mostra um exemplo ao usuário-->
+            </p>
+
+            <p>
+               <!---- <label for="senha">Senha:</label>
+                 use o password para solicitar uma senha
+                <input type="password" name="user" id="senha" placeholder="Ex:01234">-->
+            </p>
+        </Fieldset>
+
+        <fieldset>
+            <Legend>Local</Legend>
+            <p>
+                <label for="">Continente:</label>
+                <!--use radio para que o usuario escolha apenas uma opção-->
+                <input type="radio" name="continente" id="continenete1">
+                <label for="continenete1">América</label>
+            
+                <input type="radio" name="continente" id="continenete2">
+                <label for="continenete2">Europa</label>
+
+                <input type="radio" name="continente" id="continenete3">
+                <label for="continenete3">Ásia</label>
+            
+                <input type="radio" name="continente" id="continenete4">
+                <label for="continenete4">Africa</label>
+
+            </p>
+
+            <p>
+                <label for="">País:</label>
+                <!--use o select para abrir uma caixa de seleção, onde apenas uma será selecionada-->
+                <select name="" id="">
+                    <option value="0" disabled selected>Selecione o país</option>
+                    <option value="1">Brasil</option>
+                    <option value="2">Japão</option>
+                    <option value="3">Uruguai</option>
+                    <option value="4">EUA</option>
+                    <option value="5">México</option>
+                    <option value="6">Africa do Sul</option>
+                    <option value="7">Espanha</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="">Cidade:</label>
+                <!--use o list quando quiser gerar uma lista para selecionar e mostrar momes de acordo com a digitação-->
+                <input list="cidade_pais" id="cidades">
+                <datalist id="cidade_pais"> 
+                    <option value="São Paulo"></option>
+                    <option value="Rio de Janeiro"></option>
+                    <option value="Tokio"></option>
+                    <option value="Quioto"></option>
+                    <option value="Montevideo"></option>
+                    <option value="Punta del Este"></option>
+                    <option value="Nova Iorque"></option>
+                    <option value="Miami"></option>
+                    <option value="Los Angeles"></option>
+                    <option value="Cidade  do México"></option>
+                    <option value="Cancun"></option>
+                    <option value="Pretória"></option>
+                    <option value="Madri"></option>
+                    <option value="Barcelona"></option>
+                </datalist>
+            </p>
+        </fieldset>
+
+        <Fieldset>
+            <legend>Dados da viagem</legend>
+            <p>
+                <label for="data">Data da viagem:</label>
+                <!--use o date para colocar uma data no formato dd/mm/aaaa-->
+                <input type="date" name="data" id="data">
+            </p>
+
+            <p>
+                <label for="hora">Hora da viagem:</label>
+                <!--use o time para colocar uma hora no formato hh:mm-->
+                <input type="time" name="hora" id="hora">
+           </p>
+        </Fieldset>
+
+        <Fieldset>
+            <legend>Valor</legend>
+            <p>
+                <label for="valor">Valor especulado de R$2.000,00 a R$20.000,00:</label>
+                <!--use o range para selecionar um valor com mínimo e máximo-->
+                <input type="range" name="valor" id="valor">
+            </p>
+        </Fieldset>
+
+        <fieldset>
+            <legend>Contato</legend>
+            <p>
+                <!--<label for="email">email:</label>
+                use o email para pedir um email
+                <input type="email" name="" id="email" placeholder="Ex: joaozinho@email.com">-->
+                <label for="phone">Tel:</label>
+                <!--use ao tel para pedir um numero de telefone-->
+                <input type="tel" name="" id="phone" placeholder="(DDD) 9xxxx-xxxx">
+            </p>
+        </fieldset>
+
+        <fieldset>
+                <legend>Avaliação do formulário</legend>
+                <p>
+                <label for="avaliacao"></label>
+                <input type="radio" name="avaliacao" id="avaliacao1">
+                <label for="avaliacao1">1</label>
+
+                <input type="radio" name="avaliacao" id="avaliacao2">
+                <label for="avaliacao2">2</label>
+
+                <input type="radio" name="avaliacao" id="avaliacao3">
+                <label for="avaliacao3">3</label>
+
+                <input type="radio" name="avaliacao" id="avaliacao4">
+                <label for="avaliacao4">4</label>
+
+                <input type="radio" name="avaliacao" id="avaliacao5">
+                <label for="avaliacao5">5</label>
+         </p>
+
+         <p>
+            <label for="msg">Mensagem de avaliação:</label> <!--br serve para quebra de linha--><br>
+            <!--use o textarea para solicitar uma mensgem ou um texto do usuario-->
+            <textarea name="" id="msg" placeholder="Sugestões, criticas, melhorias"></textarea>
+         </p>
+        </fieldset>
+        
+        <input type="submit" value="Enviar" class="botao">
+    </form>
+</body>
+</html>
