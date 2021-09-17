@@ -62,7 +62,7 @@ h2{
     line-height: 80px;
     color: rgb(211, 94, 230);
     background-color: #102474;
-    background-image: url(./user.png);
+    background-image: url(../images/user.png);
     background-repeat: no-repeat;
     background-position: 20px center;
     background-size: 60px;
@@ -97,8 +97,8 @@ p{
     background-position: 18px center;
 }
 #email{
-    background-image: url(./email.png);
+    background-image: url(../images/email.png);
 }
 #senha{
-    background-image: url(./senha.png);
+    background-image: url(../images/senha.png);
 }
